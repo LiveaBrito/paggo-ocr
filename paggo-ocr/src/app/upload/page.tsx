@@ -49,27 +49,27 @@ export default function UploadPage() {
       setStatus('error');
     }
   };
-  
+
   return (
-    <div className="p-6 max-w-xl mx-auto">
-      <h1 className="text-2xl font-semibold mb-4">Upload de Documento</h1>
+    <div className="p-6 max-w-xl mx-auto bg-gray-100 rounded-lg shadow-lg">
+      <h1 className="text-3xl font-semibold mb-4 text-blue-800">Upload de Documento</h1>
 
       <input
         type="file"
         accept="image/*,.pdf"
         onChange={handleFileChange}
-        className="mb-4 block"
+        className="mb-4 block w-full py-3 px-4 border border-gray-300 rounded-md bg-blue-100 text-blue-800 hover:bg-blue-200 focus:ring-2 focus:ring-blue-500 focus:outline-none"
       />
 
       {preview && (
         <div className="mb-4">
-          <h2 className="text-lg font-medium mb-2">Pré-visualização:</h2>
+          <h2 className="text-lg font-medium mb-2 text-blue-700">Pré-visualização:</h2>
           <img src={preview} alt="Preview" className="max-w-full h-auto rounded border" />
         </div>
       )}
 
       <button
-        className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:opacity-50"
+        className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:opacity-50 focus:ring-2 focus:ring-blue-500"
         onClick={handleUpload}
         disabled={status === 'uploading' || !file}
       >
@@ -80,7 +80,7 @@ export default function UploadPage() {
         <p className="text-green-600 mt-4">Upload feito com sucesso!</p>
       )}
       {status === 'error' && (
-        <p className="text-red-600 mt-4">Erro no envio do arquivo.</p>
+        <p className="text-orange-600 mt-4">Erro no envio do arquivo.</p>
       )}
     </div>
   );

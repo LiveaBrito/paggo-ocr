@@ -1,6 +1,25 @@
 {
+  "name": "paggo-ocr",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
   "dependencies": {
+    "next": "13.5.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "tesseract.js": "^6.0.1",
     "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "@types/react": "^18.2.14",
+    "@types/node": "^20.4.2",
+    "eslint": "8.48.0",
+    "eslint-config-next": "13.5.6"
   }
 }
